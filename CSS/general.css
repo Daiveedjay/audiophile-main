@@ -35,7 +35,7 @@ Large: 1.8
 
 
 - Grey: #323232,
-- Tints #F1F1F1, #FAFAFA, #FBF0D7,#E8E8E8, #f1f1f1b9;
+- Tints #F1F1F1, #FAFAFA, #FBF0D7,#E8E8E8, #f1f1f1b9, #999;
 - Shades: #191919
 
 ---TEXT COLOR: #505050
@@ -84,9 +84,39 @@ body {
   color: #323232;
 }
 
-.width {
+.outer-width {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.inner-width {
   max-width: 96rem;
   margin: 0 auto;
+}
+
+.lead-header {
+  font-size: 4rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.medium-header {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sub-header {
+  letter-spacing: 0.75rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 2rem 2rem 1.5rem 0;
+}
+
+.sub-text {
+  padding: 2rem 2rem 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #919191;
+  font-weight: 400;
 }
 
 li {
@@ -95,19 +125,22 @@ li {
   margin: 0.25rem;
 }
 
+.current {
+  border-bottom-color: var(--primary-color) !important;
+}
+
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .btn:link,
 .btn:visited {
   display: inline-block;
-  color: var(--bg-main-light-color);
   text-decoration: none;
   padding: 0.8rem 1.6rem;
   font-size: 1rem;
-  border-radius: 0.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -117,12 +150,14 @@ button {
 .btn-primary:link,
 .btn-primary:visited {
   background: var(--primary-color);
+  color: var(--bg-main-light-color);
 }
 
 .btn-primary:hover,
 .btn-primary:active {
   background: var(--light-text-color);
   color: var(--bg-main-dark-color);
+  border-radius: 0.2rem;
 }
 
 .btn-dark:link,
@@ -149,12 +184,15 @@ button {
 .btn-light:active {
   color: var(--light-bg-color);
   background: var(--bg-main-dark-color);
-  /* box-shadow: 3px 6px 3px rgba(0, 0, 0, 0.2); */
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+.text-primary {
+  color: var(--primary-color);
 }
 
 /* ///////////////////////////////////////
@@ -165,6 +203,26 @@ Targetting Font Awesome classes
   margin-left: 1rem;
 }
 
-.text-primary {
-  color: var(--primary-color);
+.fa-plus,
+.fa-minus {
+  position: absolute;
+  top: 35%;
+  cursor: pointer;
+  font-size: 1rem;
 }
+
+.fa-plus {
+  left: 10px;
+}
+
+.fa-minus {
+  right: 10px;
+}
+
+/* <script>
+      var i = 0;
+        function buttonClick() {
+          i++;
+          document.getElementById("inc").value = i;
+      }
+    </script> */
