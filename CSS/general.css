@@ -93,6 +93,14 @@ body {
   margin: 0 auto;
 }
 
+.align {
+  margin: 9.6rem auto;
+}
+
+.p-1 {
+  padding: 1.6rem;
+}
+
 .lead-header {
   font-size: 4rem;
   font-family: "Source Sans Pro", sans-serif;
